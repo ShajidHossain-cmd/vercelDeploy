@@ -11,7 +11,7 @@
   <slot />
 </main>
 
-<aside>
+<!-- <aside>
   <h2>More posts</h2>
   <ul>
     {#each data.BlogList as BlogList}
@@ -22,4 +22,4 @@
       </li>
     {/each}
   </ul>
-</aside>
+</aside> -->

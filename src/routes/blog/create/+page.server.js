@@ -20,25 +20,51 @@ export const actions = {
 
       // Get the author from the session (assuming you store the username in the session)
 
-      // Create a new Date object to get the current date
-      const currentDate = new Date();
+      function getCurrentFormattedDate() {
+        const months = [
+          "Jan.",
+          "Feb.",
+          "Mar.",
+          "Apr.",
+          "May",
+          "Jun.",
+          "Jul.",
+          "Aug.",
+          "Sep.",
+          "Oct.",
+          "Nov.",
+          "Dec.",
+        ];
 
-      // Extract year, month, and day
-      const year = currentDate.getFullYear();
-      const month = currentDate.getMonth() + 1; // Months are 0-based, so add 1
-      const day = currentDate.getDate();
+        const currentDate = new Date();
+        const month = months[currentDate.getMonth()];
+        const day = currentDate.getDate();
+        const year = currentDate.getFullYear();
+
+        const formattedDate = `${month} ${day}, ${year}`;
+
+        return formattedDate;
+      }
 
       // Format the date as YYYY-MM-DD
-      const formattedDate = `${year}-${month < 10 ? "0" : ""}${month}-${
-        day < 10 ? "0" : ""
-      }${day}`;
+      const formattedDate = getCurrentFormattedDate();
 
       // Create the userPost object with additional properties
       const userPost = {
         title: formData.get("title"),
+        description: formData.get("description"),
         date: formattedDate,
-        author: formData.get("session"),
-        content: formData.get("content"),
+        author: {
+          name: formData.get("authorName"),
+          email: formData.get("authorEmail"),
+          title: null,
+
+          profilePicture: formData.get("authorImage"),
+
+          href: null,
+        },
+        content: formData.get("blogContent"),
+        comments: [],
       };
 
       // Handle the data as needed

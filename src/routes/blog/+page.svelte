@@ -1,20 +1,49 @@
 <script>
-// @ts-nocheck
 
-	import { page } from '$app/stores';
 
+  
   /** @type {import('./$types').PageData} */
   export let data;
 
-	
+  import { Section, ArticleAuthor, ArticleBody, ArticleHead, ArticleWrapper, BlogHead, BlogBodyWrapper } from 'flowbite-svelte-blocks';
+  import {  ArrowRightOutline, NewspaperSolid } from 'flowbite-svelte-icons';
 </script>
- <h1><a href="blog/create">Create</a></h1>
- <ul>
-    {#each data.BlogList as BlogList}
-      <li>
-        <a href="/blog/{BlogList._id}">
-          {BlogList.title}
+
+
+
+ {#each data.BlogList as BlogList}
+      <Section name="blog">
+ 
+  <BlogBodyWrapper>
+    <ArticleWrapper>
+      <ArticleHead>
+        <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+          <NewspaperSolid size="xs" class="mr-1" />
+          Blog
+        </span>
+        <span class="text-sm">Date: {BlogList.date}</span>
+      </ArticleHead>
+      <ArticleBody>
+        <svelte:fragment slot="h2"><a href="/blog/{BlogList._id}">{BlogList.title}</a></svelte:fragment>
+        <svelte:fragment slot="paragraph">
+          <p class="mb-5 font-light text-gray-500 dark:text-gray-400">{BlogList.description}</p>
+        </svelte:fragment>
+      </ArticleBody>
+      <ArticleAuthor>
+        <svelte:fragment slot="author">
+          <img class="w-7 h-7 rounded-full" src={BlogList.author.
+profilePicture
+} alt={BlogList.author.name}/>
+          <span class="font-medium dark:text-white"> {BlogList.author.name} </span>
+        </svelte:fragment>
+        <a href="/blog/{BlogList._id}" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+          Read more
+          <ArrowRightOutline size="sm" class="ml-2" />
         </a>
-      </li>
+      </ArticleAuthor>
+    </ArticleWrapper>
+
+
+  </BlogBodyWrapper>
+</Section>
     {/each}
-  </ul>
