@@ -62,6 +62,7 @@ const goSomeWhere = () :void => {
     <NavLi href="/blog">Blogs</NavLi>
     <NavLi href="/blog/create">Create</NavLi>
     
+    
   </NavUl>
 </Navbar>
 <main>
