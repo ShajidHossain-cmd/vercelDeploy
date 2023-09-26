@@ -131,8 +131,12 @@ function closeReplyIn(ReplyId) {
       <Label for="comment" class="sr-only">Your comment</Label>
       <Textarea name="content" id="comment" rows="6" class="mb-4"
           placeholder="Write a comment..." required>
-      </Textarea>
-      <Button form="commentForm"  name="commentForm" id="commentForm" type="submit" class="px-4 text-xs font-medium" >
+      </Textarea> {#if $page.data.session}
+         <Button form="commentForm"  name="commentForm" id="commentForm" type="submit" class="px-4 text-xs font-medium" >
+        Post comment
+      </Button>
+      {/if}
+     <Button href="/auth/signin" type="button" class="px-4 text-xs font-medium" >
         Post comment
       </Button>
     </form>
