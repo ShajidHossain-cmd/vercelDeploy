@@ -27,8 +27,8 @@ const articleCls = twMerge('mx-auto w-full max-w-2xl format format-sm sm:format-
 const headerCls = twMerge('mb-4 lg:mb-6 not-format', $$props.classHeader);
 const addressCls = twMerge('flex items-center mb-6 not-italic', $$props.classAddress);
 const divCls = twMerge('inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white', $$props.classDiv);
-const h1Cls = twMerge('mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white', $$props.classH1);
-const authorCls = twMerge('text-xl font-bold text-gray-900 dark:text-white', $$props.classAuthor);
+const h1Cls = twMerge('pl-3 mb-4 text-2xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white', $$props.classH1);
+const authorCls = twMerge(' text-xl font-bold text-gray-900 dark:text-white', $$props.classAuthor);
 const imgCls = twMerge('mr-2 w-6 h-6 rounded-full', $$props.classImg);
 const pCls = twMerge('text-base font-light text-gray-500 dark:text-gray-400', $$props.classP);
 // blog temp  css
@@ -112,8 +112,10 @@ function closeReplyIn(ReplyId) {
     </address>
     <h1 class="{h1Cls}">{blog.title}</h1>
   </header>
- 
+ <div class="pl-3">
   {@html blog.content}
+ </div>
+  
   <slot />
 </article>
 

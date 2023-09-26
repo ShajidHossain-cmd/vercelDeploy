@@ -4,9 +4,10 @@
   
   /** @type {import('./$types').PageData} */
   export let data;
-
+let  h2Class = ' py-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white';
   import { Section, ArticleAuthor, ArticleBody, ArticleHead, ArticleWrapper, BlogHead, BlogBodyWrapper } from 'flowbite-svelte-blocks';
   import {  ArrowRightOutline, NewspaperSolid } from 'flowbite-svelte-icons';
+  
 </script>
 
 
@@ -23,15 +24,15 @@
         </span>
         <span class="text-sm">Date: {BlogList.date}</span>
       </ArticleHead>
-      <ArticleBody>
+      <ArticleBody    >
         <svelte:fragment slot="h2"><a href="/blog/{BlogList._id}">{BlogList.title}</a></svelte:fragment>
         <svelte:fragment slot="paragraph">
           <p class="mb-5 font-light text-gray-500 dark:text-gray-400">{BlogList.description}</p>
         </svelte:fragment>
       </ArticleBody>
-      <ArticleAuthor>
+      <ArticleAuthor >
         <svelte:fragment slot="author">
-          <img class="w-7 h-7 rounded-full" src={BlogList.author.
+          <img class=" w-7 h-7 rounded-full" src={BlogList.author.
 profilePicture
 } alt={BlogList.author.name}/>
           <span class="font-medium dark:text-white"> {BlogList.author.name} </span>
