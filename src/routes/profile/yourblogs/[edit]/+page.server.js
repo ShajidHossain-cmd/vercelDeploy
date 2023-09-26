@@ -51,6 +51,8 @@ export const actions = {
       title: formData.get("title"),
       description: formData.get("description"),
       date: formattedDate,
+      image: formData.get("ImageLink"),
+
       author: {
         name: formData.get("authorName"),
         title: null,

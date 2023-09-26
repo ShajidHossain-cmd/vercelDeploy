@@ -13,6 +13,8 @@
         <Input type="text" name="title" id="title" maxlength="50" required />
         <Label for="description" class="block mb-2">Description:</Label>
         <Input type="text" name="description" id="description" maxlength="150" required />
+        <Label for="description" class="block mb-2">Thumbnail:</Label>
+        <Input type="text" name="ImageLink" id="ImageLink" placeholder="Image link" required />
     </div>
   
 

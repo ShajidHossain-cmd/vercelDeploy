@@ -72,7 +72,7 @@ const goSomeWhere = () :void => {
 
 <Footer footerType="socialmedia">
   <div class="mx-auto max-w-screen-xl text-center">
-    <FooterBrand href="#" src="#" alt="Garden Logo" name="Garden Blog" aClass="flex justify-center items-center text-2xl font-semibold text-green-800" />
+    <FooterBrand href="#" src={logo} alt="Garden Logo" name="UrbanG" aClass="flex justify-center items-center text-2xl font-semibold text-green-800" />
     <p class="my-6 text-gray-500 dark:text-gray-400">Discover the world of gardening with our blog. Get tips, advice, and inspiration for your garden.</p>
     <FooterLinkGroup ulClass="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
       <FooterLink liClass="" aClass="mr-4 hover:underline md:mr-6" href="/">About</FooterLink>
