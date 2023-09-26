@@ -21,8 +21,9 @@
 
   <!-- Include session data as a hidden input field -->
   <input type="hidden" name="authorName" value={$page.data.session?.user?.name}>
-  <input type="hidden" name="authorName" value={$page.data.session?.user?.email}>
-  <input type="hidden" name="authorEmail" value={$page.data.session?.user?.image}>
+  <input type="hidden" name="authorEmail" value={$page.data.session?.user?.email}>
+ 
+  <input type="hidden" name="authorImage" value={$page.data.session?.user?.image}>
   <input type="hidden" name="blogContent" value={blogContent}>
 <Editor
 
