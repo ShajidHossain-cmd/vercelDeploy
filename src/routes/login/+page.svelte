@@ -57,7 +57,7 @@ import { Button, Checkbox, Label, Input } from 'flowbite-svelte';
     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
         {#if !$page.data.session}
       <form on:submit={handleEmailSignIn} class="flex flex-col space-y-6" >
-        <h3 class="text-xl font-medium text-gray-900 dark:text-white p-0">Change Password</h3>
+        <h3 class="text-xl font-medium text-gray-900 dark:text-white p-0">Sign Up</h3>
         <Label class="space-y-2">
           <span>Your email</span>
           <Input bind:value={email} type="email" name="email" placeholder="name@company.com" required />
@@ -82,7 +82,7 @@ import { Button, Checkbox, Label, Input } from 'flowbite-svelte';
          <Button on:click={handleSignOut} class="w-full1" >Sign out</Button>
           {/if}
         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-          Don’t have an account yet? <a href="/" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+           Have an account yet? <a href="/" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign in</a>
         </p>
      
     </div>
