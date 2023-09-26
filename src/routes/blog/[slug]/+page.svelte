@@ -135,10 +135,11 @@ function closeReplyIn(ReplyId) {
          <Button form="commentForm"  name="commentForm" id="commentForm" type="submit" class="px-4 text-xs font-medium" >
         Post comment
       </Button>
-      {/if}
+      {:else}
      <Button href="/auth/signin" type="button" class="px-4 text-xs font-medium" >
         Post comment
       </Button>
+      {/if}
     </form>
     
      {#each comments as comment,  i} 
