@@ -70,7 +70,7 @@ import { Button, Checkbox, Label, Input } from 'flowbite-svelte';
           <Checkbox>Remember me</Checkbox>
           <a href="/" class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot password?</a>
         </div>
-        <Button type="submit" class="w-full1" >Sign in</Button>
+        <Button type="submit" class="w-full1" >Sign up</Button>
          </form>
          <h2>Continue with Google:</h2>
          <button on:click={handleGoogleSignIn}>
