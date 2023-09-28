@@ -86,11 +86,9 @@ let innerWidth
  
   <NavHamburger on:click={toggle} />
   <NavUl {activeUrl} {hidden}>
-    <NavLi href="/">Home</NavLi>
-    <NavLi href="/docs/components/navbar">Navbar</NavLi>
-    <NavLi href="/docs/components/accordion">Accordion</NavLi>
-    <NavLi href="/docs/components/alert">Alert</NavLi>
-    <NavLi href="/docs/components/avatar">Avatar</NavLi>
+    <NavLi href="/profile/yourblogs">My Blogs</NavLi>
+  
+    <NavLi on:click={handleSignOut}>Sign out</NavLi>
   </NavUl>
 </Navbar>
 <slot/>
